@@ -1,0 +1,199 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #8b5cf6;
+  --ifm-color-primary-dark: #7c3aed;
+  --ifm-color-primary-darker: #6d28d9;
+  --ifm-color-primary-darkest: #5b21b6;
+  --ifm-color-primary-light: #a78bfa;
+  --ifm-color-primary-lighter: #c4b5fd;
+  --ifm-color-primary-lightest: #ddd6fe;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Hero section colors */
+  --hero-background-color: #8b5cf6;
+  --hero-text-color: #ffffff;
+  
+  /* Card styles */
+  --card-border-radius: 8px;
+  --card-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --card-hover-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #a78bfa;
+  --ifm-color-primary-dark: #8b5cf6;
+  --ifm-color-primary-darker: #7c3aed;
+  --ifm-color-primary-darkest: #6d28d9;
+  --ifm-color-primary-light: #c4b5fd;
+  --ifm-color-primary-lighter: #ddd6fe;
+  --ifm-color-primary-lightest: #ede9fe;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Hero section colors in dark mode */
+  --hero-background-color: #6d28d9;
+  --hero-text-color: #ffffff;
+}
+
+/* Hero section styles */
+.hero--primary {
+  background-color: var(--hero-background-color);
+  color: var(--hero-text-color);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Featured workshops section */
+.section-title {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured-workshops {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.workshop-card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--card-border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--card-box-shadow);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.workshop-card:hover {
+  box-shadow: var(--card-hover-box-shadow);
+  transform: translateY(-2px);
+}
+
+.workshop-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.workshop-card p {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+/* Two-column section */
+.two-column-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  .two-column-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Features section */
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.feature-item svg {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.feature-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 996px) {
+  .features-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Button styles */
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+/* Navbar customization */
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar__brand {
+  font-weight: bold;
+}
+
+/* Footer customization */
+.footer {
+  padding: 4rem 0;
+}
+
+.footer__links {
+  margin-bottom: 3rem;
+}
+
+.footer__title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer__item {
+  padding: 0.25rem 0;
+}
+
+.footer__copyright {
+  font-size: 0.875rem;
+}
